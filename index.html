@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activity Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body id="body">
+    <h1>About Myself</h1>
+    <p id="paragraph">
+      I am a passionate student currently in freshman college with a strong
+      interest in web development and design. With a little experience in HTML,
+      CSS, and JavaScript, I am constantly seeking to expand my knowledge and
+      skills in front-end development. My career goal is to become a highly
+      skilled front-end web developer. I aim to design and build user-centric,
+      responsive web applications that enhance the user experience while
+      leveraging modern development frameworks.
+    </p>
+    <button id="button" onclick="handleClick()">Click me!</button>
+    <br /><br />
+
+    <!-- Input fields for first name, last name, section -->
+    <input
+      type="text"
+      id="inputBox1"
+      name="first name"
+      onchange="handleSubmit(this, 'p1')"
+      placeholder="First Name"
+      value=""
+    />
+    <input
+      type="text"
+      id="inputBox2"
+      name="last name"
+      onchange="handleSubmit(this, 'p2')"
+      placeholder="Last Name"
+    />
+    <input
+      type="text"
+      id="inputBox3"
+      name="section"
+      onchange="handleSubmit(this, 'p3')"
+      placeholder="Section"
+    />
+
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3" style="margin-bottom: 3em"></p>
+
+    <!-- BMI Table and Insert Row button -->
+    <table id="sampleTable">
+      <thead>
+        <tr>
+          <th>Height (cm)</th>
+          <th>Weight (kg)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ex. 175cm</td>
+          <td>ex. 60kg</td>
+        </tr>
+      </tbody>
+    </table>
+    <input type="button" onclick="insert_Row()" value="Insert Row" />
+
+    <br /><br />
+
+    <!-- Select name dropdown and list -->
+    <select name="names" id="names" onchange="addList()">
+      <option disabled selected value>-- select --</option>
+      <option value="Saji Banaga">Saji</option>
+      <option value="Paul John Tambal">Paul</option>
+      <option value="Ly">Ly</option>
+      <option value="Levic Nielo">Edward</option>
+      <option value="Arlan Martin Jalop">Allan</option>
+      <option value="Gian Khiel Nieva">Gian</option>
+    </select>
+    <button onclick="handleClear()">Clear</button>
+    <ul id="ul"></ul>
+
+    <!-- Image gallery -->
+    <div class="g-frame">
+      <div class="frame">
+        <img
+          src="cheongmyeong.jpg"
+          alt="Cheongmyeong"
+          onclick="handleZoom(this)"
+        />
+      </div>
+      <div class="frame">
+        <img src="arthur.jpg" alt="Arthur" onclick="handleZoom(this)" />
+      </div>
+      <div class="frame">
+        <img src="cheonwoon.jpg" alt="Cheonwoon" onclick="handleZoom(this)" />
+      </div>
+    </div>
+
+    <!-- Random background color button -->
+    <div class="btns">
+      <button id="bgRandomizer" onclick="handleRandomizer()">
+        Random Background Color
+      </button>
+      <button id="bgDefault" onclick="handleBgDef()">Default</button>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
